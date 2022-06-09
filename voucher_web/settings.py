@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+import django_on_heroku
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -76,8 +78,12 @@ WSGI_APPLICATION = 'voucher_web.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd1qnpjgl346b22',
+        'USER': 'kyiovymjyqajks',
+        'PASSWORD': 'd4f94a28c3273d9cbc27eb3b061da98a5bf3ddf3c8d37b4423b0ab7b72e84b29',
+        'HOST': 'ec2-3-211-221-185.compute-1.amazonaws.com',
+        'PORT':  '5432',
     }
 }
 
@@ -122,3 +128,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_on_heroku.settings(locals())
