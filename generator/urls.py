@@ -1,8 +1,8 @@
 from django.urls import path
-from generator.views import generator_page, save_voucher, success_page
+from generator.views import generator_page, save_voucher, download_voucher
 
 urlpatterns = [
     path('', generator_page, name='generator'),
     path('save/', save_voucher, name='save'),
-    path('success/', success_page, name='success'),
+    path('download/<str:code>', download_voucher, name='download')
 ]

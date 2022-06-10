@@ -14,6 +14,12 @@
     <div class="card-body text-center">
         Voucher Created!
         <div class="row g-3 align-items-center mt-1">
+          <div style="margin: auto">
+            {{ qr|safe }}
+          </div>
+          <a class="link-secondary" href="{% url 'download' code=qrcode %}" download="">Download Voucher</a>
+        </div>
+        <div class="row g-3 align-items-center mt-1">
           <a class="btn btn-outline-dark mx-auto" style="width: 20%" href="{% url 'generator' %}">Back to Generator</a>
         </div>
     </div>
@@ -23,10 +29,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
         crossorigin="anonymous"></script>
-<script>
-    setTimeout(function() {
-        window.location.href = "{% url 'generator' %}"
-    }, 3000);
-</script>
 </body>
 </html>
