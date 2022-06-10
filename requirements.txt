@@ -8,7 +8,7 @@ psycopg2-binary==2.9.3
 pypng==0.0.21
 PyQRCode==1.2.1
 python-magic==0.4.27
-python-magic-bin==0.4.14
+-e git://github.com/julian-r/python-magic.git#egg=python-magic-bin
 sqlparse==0.4.2
 tzdata==2022.1
 whitenoise==6.2.0
