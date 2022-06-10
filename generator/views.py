@@ -1,5 +1,4 @@
 from io import BytesIO
-import magic
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.utils.crypto import get_random_string
@@ -49,7 +48,6 @@ def download_voucher(request, code):
     qr.png(stream, scale=5)
     png = stream.getvalue()
 
-    content_type = magic.from_buffer(png, mime=True)
-    response = HttpResponse(png, content_type=content_type)
+    response = HttpResponse(png, content_type='image/png')
     response['Content-Disposition'] = f'attachment; filename=Voucher.png'
     return response
