@@ -17,7 +17,7 @@
           <div style="margin: auto">
             {{ qr|safe }}
           </div>
-          <a class="link-secondary" href="{% url 'download' code=qrcode %}" download="">Download Voucher</a>
+          <a class="link-secondary" href="{% url 'download' code=qrcode %}" download>Download Voucher</a>
         </div>
         <div class="row g-3 align-items-center mt-1">
           <a class="btn btn-outline-dark mx-auto" style="width: 20%" href="{% url 'generator' %}">Back to Generator</a>

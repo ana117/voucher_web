@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'generator',
     'models',
     'redeemer',
+    'home',
 ]
 
 MIDDLEWARE = [

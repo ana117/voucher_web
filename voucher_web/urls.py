@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from generator import urls as generator
 from redeemer import urls as redeemer
+from home import urls as home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('generator/', include(generator)),
-    path('', include(redeemer)),
+    path('redeemer/', include(redeemer)),
+    path('', include(home))
 ]
