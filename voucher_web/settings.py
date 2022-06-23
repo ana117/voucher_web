@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'models',
     'redeemer',
     'home',
+    'api',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -77,6 +79,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'voucher_web.wsgi.application'
+
+
 
 
 # Database
@@ -118,7 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Jakarta'
 
 USE_I18N = True
 

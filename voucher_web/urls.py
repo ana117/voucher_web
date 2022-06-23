@@ -18,10 +18,12 @@ from django.urls import path, include
 from generator import urls as generator
 from redeemer import urls as redeemer
 from home import urls as home
+from api import urls as api
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('generator/', include(generator)),
     path('redeemer/', include(redeemer)),
-    path('', include(home))
+    path('', include(home)),
+    path('api/', include(api))
 ]
