@@ -2,6 +2,8 @@ from datetime import datetime
 
 from django.http import JsonResponse
 from django.shortcuts import render
+from django.utils import timezone
+
 from models.models import Voucher
 
 REDEEMER_PAGE = "redeemer-page.html"
@@ -13,7 +15,7 @@ def redeem(voucher_code):
         return False
 
     voucher.is_used = True
-    voucher.date_used = datetime.now()
+    voucher.date_used = timezone.now()
     voucher.save()
     return True
 
